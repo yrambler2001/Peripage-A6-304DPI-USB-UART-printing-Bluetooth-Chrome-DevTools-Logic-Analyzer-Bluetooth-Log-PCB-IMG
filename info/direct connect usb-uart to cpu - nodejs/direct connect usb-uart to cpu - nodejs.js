@@ -179,7 +179,7 @@ function decimalToHexLittleEndian(decimal) {
 
 setTimeout(async () => {
 
-  // port.write(Buffer.from("0D0A4F4B0D0A", "hex"))
+  // port.write(Buffer.from("0D0A4F4B0D0A", "hex")) // at the startup of CPU, it asks BT `AT+BT=1\r\n` (0x41542b42543D310D0A). It expects the BT to respond `\r\nOK\r\n` (0x0D0A4F4B0D0A)
   console.log(0)
   port.write(Buffer.from("10ffff8d", "hex"))
   console.log(await getData(port)) // 0xd8

@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0908BBC02C62BC2D008473A9 /* Vapor in Frameworks */ = {isa = PBXBuildFile; productRef = 0908BBBF2C62BC2D008473A9 /* Vapor */; };
+		0908BBC52C62BC45008473A9 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = 0908BBC42C62BC45008473A9 /* NIO */; };
+		0908BBC72C62BC45008473A9 /* NIOConcurrencyHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 0908BBC62C62BC45008473A9 /* NIOConcurrencyHelpers */; };
+		0908BBC92C62BC45008473A9 /* NIOCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0908BBC82C62BC45008473A9 /* NIOCore */; };
+		0908BBCB2C62BC45008473A9 /* NIOEmbedded in Frameworks */ = {isa = PBXBuildFile; productRef = 0908BBCA2C62BC45008473A9 /* NIOEmbedded */; };
+		0908BBCD2C62BC45008473A9 /* NIOFoundationCompat in Frameworks */ = {isa = PBXBuildFile; productRef = 0908BBCC2C62BC45008473A9 /* NIOFoundationCompat */; };
+		0908BBCF2C62BE64008473A9 /* configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908BBCE2C62BE64008473A9 /* configure.swift */; };
+		0908BBD12C62BE6B008473A9 /* vaporEntrypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908BBD02C62BE6B008473A9 /* vaporEntrypoint.swift */; };
+		0908BBD32C62BE6D008473A9 /* routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908BBD22C62BE6D008473A9 /* routes.swift */; };
+		094E413A2C62AC720079287C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E41392C62AC720079287C /* AppDelegate.swift */; };
+		094E413C2C62AC730079287C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094E413B2C62AC730079287C /* Assets.xcassets */; };
+		094E413F2C62AC730079287C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 094E413E2C62AC730079287C /* Base */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		094E41462C62AC740079287C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 094E412E2C62AC720079287C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 094E41352C62AC720079287C;
+			remoteInfo = "peripage-cocoa-vapor-swift";
+		};
+		094E41502C62AC740079287C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 094E412E2C62AC720079287C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 094E41352C62AC720079287C;
+			remoteInfo = "peripage-cocoa-vapor-swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0908BBCE2C62BE64008473A9 /* configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configure.swift; sourceTree = "<group>"; };
+		0908BBD02C62BE6B008473A9 /* vaporEntrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vaporEntrypoint.swift; sourceTree = "<group>"; };
+		0908BBD22C62BE6D008473A9 /* routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = routes.swift; sourceTree = "<group>"; };
+		094E41362C62AC720079287C /* peripage-cocoa-vapor-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "peripage-cocoa-vapor-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		094E41392C62AC720079287C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		094E413B2C62AC730079287C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		094E413E2C62AC730079287C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		094E41402C62AC730079287C /* peripage_cocoa_vapor_swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = peripage_cocoa_vapor_swift.entitlements; sourceTree = "<group>"; };
+		094E41452C62AC740079287C /* peripage-cocoa-vapor-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "peripage-cocoa-vapor-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		094E414F2C62AC740079287C /* peripage-cocoa-vapor-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "peripage-cocoa-vapor-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		094E41332C62AC720079287C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0908BBC52C62BC45008473A9 /* NIO in Frameworks */,
+				0908BBC72C62BC45008473A9 /* NIOConcurrencyHelpers in Frameworks */,
+				0908BBC02C62BC2D008473A9 /* Vapor in Frameworks */,
+				0908BBCB2C62BC45008473A9 /* NIOEmbedded in Frameworks */,
+				0908BBCD2C62BC45008473A9 /* NIOFoundationCompat in Frameworks */,
+				0908BBC92C62BC45008473A9 /* NIOCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		094E41422C62AC740079287C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		094E414C2C62AC740079287C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		094E412D2C62AC720079287C = {
+			isa = PBXGroup;
+			children = (
+				094E41382C62AC720079287C /* peripage-cocoa-vapor-swift */,
+				094E41372C62AC720079287C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		094E41372C62AC720079287C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				094E41362C62AC720079287C /* peripage-cocoa-vapor-swift.app */,
+				094E41452C62AC740079287C /* peripage-cocoa-vapor-swiftTests.xctest */,
+				094E414F2C62AC740079287C /* peripage-cocoa-vapor-swiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		094E41382C62AC720079287C /* peripage-cocoa-vapor-swift */ = {
+			isa = PBXGroup;
+			children = (
+				094E41392C62AC720079287C /* AppDelegate.swift */,
+				0908BBCE2C62BE64008473A9 /* configure.swift */,
+				0908BBD02C62BE6B008473A9 /* vaporEntrypoint.swift */,
+				0908BBD22C62BE6D008473A9 /* routes.swift */,
+				094E413B2C62AC730079287C /* Assets.xcassets */,
+				094E413D2C62AC730079287C /* MainMenu.xib */,
+				094E41402C62AC730079287C /* peripage_cocoa_vapor_swift.entitlements */,
+			);
+			path = "peripage-cocoa-vapor-swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		094E41352C62AC720079287C /* peripage-cocoa-vapor-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 094E41592C62AC740079287C /* Build configuration list for PBXNativeTarget "peripage-cocoa-vapor-swift" */;
+			buildPhases = (
+				094E41322C62AC720079287C /* Sources */,
+				094E41332C62AC720079287C /* Frameworks */,
+				094E41342C62AC720079287C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "peripage-cocoa-vapor-swift";
+			packageProductDependencies = (
+				0908BBBF2C62BC2D008473A9 /* Vapor */,
+				0908BBC42C62BC45008473A9 /* NIO */,
+				0908BBC62C62BC45008473A9 /* NIOConcurrencyHelpers */,
+				0908BBC82C62BC45008473A9 /* NIOCore */,
+				0908BBCA2C62BC45008473A9 /* NIOEmbedded */,
+				0908BBCC2C62BC45008473A9 /* NIOFoundationCompat */,
+			);
+			productName = "peripage-cocoa-vapor-swift";
+			productReference = 094E41362C62AC720079287C /* peripage-cocoa-vapor-swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		094E41442C62AC740079287C /* peripage-cocoa-vapor-swiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 094E415C2C62AC740079287C /* Build configuration list for PBXNativeTarget "peripage-cocoa-vapor-swiftTests" */;
+			buildPhases = (
+				094E41412C62AC740079287C /* Sources */,
+				094E41422C62AC740079287C /* Frameworks */,
+				094E41432C62AC740079287C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				094E41472C62AC740079287C /* PBXTargetDependency */,
+			);
+			name = "peripage-cocoa-vapor-swiftTests";
+			productName = "peripage-cocoa-vapor-swiftTests";
+			productReference = 094E41452C62AC740079287C /* peripage-cocoa-vapor-swiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		094E414E2C62AC740079287C /* peripage-cocoa-vapor-swiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 094E415F2C62AC740079287C /* Build configuration list for PBXNativeTarget "peripage-cocoa-vapor-swiftUITests" */;
+			buildPhases = (
+				094E414B2C62AC740079287C /* Sources */,
+				094E414C2C62AC740079287C /* Frameworks */,
+				094E414D2C62AC740079287C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				094E41512C62AC740079287C /* PBXTargetDependency */,
+			);
+			name = "peripage-cocoa-vapor-swiftUITests";
+			productName = "peripage-cocoa-vapor-swiftUITests";
+			productReference = 094E414F2C62AC740079287C /* peripage-cocoa-vapor-swiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		094E412E2C62AC720079287C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					094E41352C62AC720079287C = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					094E41442C62AC740079287C = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 094E41352C62AC720079287C;
+					};
+					094E414E2C62AC740079287C = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 094E41352C62AC720079287C;
+					};
+				};
+			};
+			buildConfigurationList = 094E41312C62AC720079287C /* Build configuration list for PBXProject "peripage-cocoa-vapor-swift" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 094E412D2C62AC720079287C;
+			packageReferences = (
+				0908BBBE2C62BC2C008473A9 /* XCRemoteSwiftPackageReference "vapor" */,
+				0908BBC32C62BC45008473A9 /* XCRemoteSwiftPackageReference "swift-nio" */,
+			);
+			productRefGroup = 094E41372C62AC720079287C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				094E41352C62AC720079287C /* peripage-cocoa-vapor-swift */,
+				094E41442C62AC740079287C /* peripage-cocoa-vapor-swiftTests */,
+				094E414E2C62AC740079287C /* peripage-cocoa-vapor-swiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		094E41342C62AC720079287C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				094E413C2C62AC730079287C /* Assets.xcassets in Resources */,
+				094E413F2C62AC730079287C /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		094E41432C62AC740079287C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		094E414D2C62AC740079287C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		094E41322C62AC720079287C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0908BBCF2C62BE64008473A9 /* configure.swift in Sources */,
+				0908BBD32C62BE6D008473A9 /* routes.swift in Sources */,
+				094E413A2C62AC720079287C /* AppDelegate.swift in Sources */,
+				0908BBD12C62BE6B008473A9 /* vaporEntrypoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		094E41412C62AC740079287C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		094E414B2C62AC740079287C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		094E41472C62AC740079287C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 094E41352C62AC720079287C /* peripage-cocoa-vapor-swift */;
+			targetProxy = 094E41462C62AC740079287C /* PBXContainerItemProxy */;
+		};
+		094E41512C62AC740079287C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 094E41352C62AC720079287C /* peripage-cocoa-vapor-swift */;
+			targetProxy = 094E41502C62AC740079287C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		094E413D2C62AC730079287C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				094E413E2C62AC730079287C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		094E41572C62AC740079287C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "yes it is needed";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		094E41582C62AC740079287C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "yes it is needed";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		094E415A2C62AC740079287C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "peripage-cocoa-vapor-swift/peripage_cocoa_vapor_swift.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-enable-upcoming-feature DisableOutwardActorInference -enable-experimental-feature StrictConcurrency";
+				PRODUCT_BUNDLE_IDENTIFIER = "yrambler2001.peripage-cocoa-vapor-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		094E415B2C62AC740079287C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "peripage-cocoa-vapor-swift/peripage_cocoa_vapor_swift.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-enable-upcoming-feature DisableOutwardActorInference -enable-experimental-feature StrictConcurrency";
+				PRODUCT_BUNDLE_IDENTIFIER = "yrambler2001.peripage-cocoa-vapor-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		094E415D2C62AC740079287C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "yrambler2001.peripage-cocoa-vapor-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/peripage-cocoa-vapor-swift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/peripage-cocoa-vapor-swift";
+			};
+			name = Debug;
+		};
+		094E415E2C62AC740079287C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "yrambler2001.peripage-cocoa-vapor-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/peripage-cocoa-vapor-swift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/peripage-cocoa-vapor-swift";
+			};
+			name = Release;
+		};
+		094E41602C62AC740079287C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "yrambler2001.peripage-cocoa-vapor-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "peripage-cocoa-vapor-swift";
+			};
+			name = Debug;
+		};
+		094E41612C62AC740079287C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "yrambler2001.peripage-cocoa-vapor-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "peripage-cocoa-vapor-swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		094E41312C62AC720079287C /* Build configuration list for PBXProject "peripage-cocoa-vapor-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				094E41572C62AC740079287C /* Debug */,
+				094E41582C62AC740079287C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		094E41592C62AC740079287C /* Build configuration list for PBXNativeTarget "peripage-cocoa-vapor-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				094E415A2C62AC740079287C /* Debug */,
+				094E415B2C62AC740079287C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		094E415C2C62AC740079287C /* Build configuration list for PBXNativeTarget "peripage-cocoa-vapor-swiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				094E415D2C62AC740079287C /* Debug */,
+				094E415E2C62AC740079287C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		094E415F2C62AC740079287C /* Build configuration list for PBXNativeTarget "peripage-cocoa-vapor-swiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				094E41602C62AC740079287C /* Debug */,
+				094E41612C62AC740079287C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0908BBBE2C62BC2C008473A9 /* XCRemoteSwiftPackageReference "vapor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/vapor.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.99.3;
+			};
+		};
+		0908BBC32C62BC45008473A9 /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.65.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0908BBBF2C62BC2D008473A9 /* Vapor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0908BBBE2C62BC2C008473A9 /* XCRemoteSwiftPackageReference "vapor" */;
+			productName = Vapor;
+		};
+		0908BBC42C62BC45008473A9 /* NIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0908BBC32C62BC45008473A9 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIO;
+		};
+		0908BBC62C62BC45008473A9 /* NIOConcurrencyHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0908BBC32C62BC45008473A9 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOConcurrencyHelpers;
+		};
+		0908BBC82C62BC45008473A9 /* NIOCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0908BBC32C62BC45008473A9 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOCore;
+		};
+		0908BBCA2C62BC45008473A9 /* NIOEmbedded */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0908BBC32C62BC45008473A9 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOEmbedded;
+		};
+		0908BBCC2C62BC45008473A9 /* NIOFoundationCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0908BBC32C62BC45008473A9 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOFoundationCompat;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 094E412E2C62AC720079287C /* Project object */;
+}
