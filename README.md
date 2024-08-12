@@ -80,6 +80,6 @@ The width of the printer head is 48mm so in one millimeter there are `PixelsInOn
 
 So to draw one pixel, the motor has to to `StepsOfStepperMotor6.7mmToDrawOnePixel = StepsOfStepperMotor6.7mmInOneMillimeter / PixelsInOneMM ≈ 3.97938115142` or if assume 6.5mm feeder diameter: `StepsOfStepperMotor6.5mmToDrawOnePixel = StepsOfStepperMotor6.5mmInOneMillimeter / PixelsInOneMM ≈ 4.10182364839` (`1 / (((360 / 40) * (1 / ((24 / 12) * (28 / 13) * (40 / 12) * (21 / 12)))) * ((6.7 * pi) / 360)) / (576 / 48)`).
 
-So the stepper has to do 4 steps to move from line to line.
+So the stepper has to do 4 steps to move from line to line, which is the same as the number of steps the original software from PeriPage does to print a line [[img](./info/readme%20images/Screenshot%202024-08-12%20at%2013.45.39.png)] [[log](./info/saleae/original%20chip/motor.sal)]
 
 ---
