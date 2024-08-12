@@ -7,11 +7,11 @@ const file = fs.readFileSync(filePath) + '';
 
 
 const { createCanvas } = require('canvas')
-const canvas = createCanvas(600, 5000)
+const canvas = createCanvas(600, 10000)
 const ctx = canvas.getContext('2d')
 
 ctx.fillStyle = "rgba(255,255,255,255)";
-ctx.fillRect(0, 0, 600, 5000);
+ctx.fillRect(0, 0, 600, 10000);
 
 const fileLines = file.split('\n').filter(Boolean)
 fileLines.shift()
@@ -29,9 +29,9 @@ const getChannelInLine = (line, channelIndex) => {
 // const clockIndex = 2;
 // const dataIndex = 1;
 // const latchIndex = 3;
-const clockIndex = 0;
-const dataIndex = 1;
-const latchIndex = 3;
+const clockIndex = 3;
+const dataIndex = 2;
+const latchIndex = 1;
 
 let lastClock = 0;
 let lastData = 0;
