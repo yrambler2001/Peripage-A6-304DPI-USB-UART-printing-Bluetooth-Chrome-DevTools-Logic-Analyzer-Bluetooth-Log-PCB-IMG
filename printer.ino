@@ -2275,7 +2275,7 @@ void setup()
 
 uint8_t transformed[72];
 
-#define WAIT_TIME_FOR_STEPPER_TO_COMPLETE_STEP_MICROSECONDS 2000
+// #define WAIT_TIME_FOR_STEPPER_TO_COMPLETE_STEP_MICROSECONDS 2000
 
 void writeLine(const uint8_t *data, uint16_t line_index)
 {
@@ -2292,7 +2292,7 @@ void writeLine(const uint8_t *data, uint16_t line_index)
     {
       // We cannot wait extra time for stepper to end its step selectively because heating element will lose heat.
       // We are always waiting before each print so we know that heating element lost its heat evenly before each print.
-      delayMicroseconds(WAIT_TIME_FOR_STEPPER_TO_COMPLETE_STEP_MICROSECONDS);
+      delayMicroseconds(50);
 
       // Calculate the mask for the desired bit position
       uint8_t mask = 1 << (7 - bit);
@@ -2319,7 +2319,7 @@ void writeLine(const uint8_t *data, uint16_t line_index)
       digitalWrite(PIN_LAT, HIGH);
       delayMicroseconds(2);
       GPIO.out_w1ts = ((uint32_t)1 << PIN_DST);
-      delayMicroseconds(1000);
+      delayMicroseconds(3000);
       GPIO.out_w1tc = ((uint32_t)1 << PIN_DST);
       delayMicroseconds(7);
     }
