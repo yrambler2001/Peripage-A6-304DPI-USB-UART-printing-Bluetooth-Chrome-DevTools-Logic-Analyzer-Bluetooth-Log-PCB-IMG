@@ -2275,7 +2275,7 @@ void setup()
 
 uint8_t transformed[72];
 
-#define WAIT_TIME_FOR_STEPPER_TO_COMPLETE_STEP_MICROSECONDS 2000
+#define WAIT_TIME_FOR_STEPPER_TO_COMPLETE_STEP_MICROSECONDS 1000
 
 void writeLine(const uint8_t *data, uint16_t line_index)
 {
@@ -2319,7 +2319,7 @@ void writeLine(const uint8_t *data, uint16_t line_index)
       digitalWrite(PIN_LAT, HIGH);
       delayMicroseconds(2);
       GPIO.out_w1ts = ((uint32_t)1 << PIN_DST);
-      delayMicroseconds(1000);
+      delayMicroseconds(1200);
       GPIO.out_w1tc = ((uint32_t)1 << PIN_DST);
       delayMicroseconds(7);
     }
@@ -2344,8 +2344,8 @@ void loop()
     stepper.setSpeed(89); // rpm
     // stepper.rotate(-1);
     digitalWrite(PIN_VP, HIGH); // Motor driver is powered from the same line as the printer head
-    // stepper.doSteps(-10 * 10); // feed paper out
-    stepper.doSteps(10 * 10); // feed paper in (for debug purposes to save empty space on paper)
+    stepper.doSteps(-3 * 10); // feed paper out
+    // stepper.doSteps(10 * 10); // feed paper in (for debug purposes to save empty space on paper)
     while (stepper.moving())
     {
     }
