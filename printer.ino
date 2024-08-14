@@ -2274,6 +2274,10 @@ void setup()
 }
 
 uint8_t transformed[72];
+uint16_t batchLength = 32;
+uint16_t batch = 0;
+uint16_t bitIndex = 0;
+uint16_t valueToSet = 0;
 
 #define WAIT_TIME_FOR_STEPPER_TO_COMPLETE_STEP_MICROSECONDS 2000
 
@@ -2288,20 +2292,34 @@ void writeLine(const uint8_t *data, uint16_t line_index)
     // }
 
     // Iterate over each bit position (0 to 7)
-    for (uint8_t bit = 0; bit < 8; ++bit)
+    // uint8_t transformed[72];
+
+    for (batch = 0; batch < batchLength; batch += 1)
     {
+      for (bitIndex = 0; bitIndex < 576; bitIndex += 1)
+      {
+        valueToSet = (bitIndex + (batchLength - batch)) % batchLength == 0 ? (((data[72 * line_index + bitIndex / 8] >> ( (bitIndex % 8))) & 1)) : 0;
+        if (valueToSet == 0)
+        {
+          transformed[bitIndex / 8] &= ~(1 << (bitIndex % 8));
+        }
+        else
+        {
+          transformed[bitIndex / 8] |= 1 <<  (bitIndex % 8);
+        }
+      }
       // We cannot wait extra time for stepper to end its step selectively because heating element will lose heat.
       // We are always waiting before each print so we know that heating element lost its heat evenly before each print.
       delayMicroseconds(WAIT_TIME_FOR_STEPPER_TO_COMPLETE_STEP_MICROSECONDS);
 
       // Calculate the mask for the desired bit position
-      uint8_t mask = 1 << (7 - bit);
+      // uint8_t mask = 1 << (7 - bit);
 
       // Apply the mask to each byte in the input array
-      for (int i = 0; i < 72; ++i)
-      {
-        transformed[i] = data[72 * line_index + i] & mask;
-      }
+      // for (int i = 0; i < 72; ++i)
+      // {
+      //   transformed[i] = data[72 * line_index + i] & mask;
+      // }
 
       portENTER_CRITICAL(&my_mutex);
       SPI.beginTransaction(SPISettings(4500000, MSBFIRST, SPI_MODE1));
@@ -2319,7 +2337,7 @@ void writeLine(const uint8_t *data, uint16_t line_index)
       digitalWrite(PIN_LAT, HIGH);
       delayMicroseconds(2);
       GPIO.out_w1ts = ((uint32_t)1 << PIN_DST);
-      delayMicroseconds(1000);
+      delayMicroseconds(4000);
       GPIO.out_w1tc = ((uint32_t)1 << PIN_DST);
       delayMicroseconds(7);
     }
@@ -2345,10 +2363,14 @@ void loop()
     // stepper.rotate(-1);
     digitalWrite(PIN_VP, HIGH); // Motor driver is powered from the same line as the printer head
     // stepper.doSteps(-10 * 10); // feed paper out
-    stepper.doSteps(10 * 10); // feed paper in (for debug purposes to save empty space on paper)
-    while (stepper.moving())
-    {
-    }
+    // stepper.doSteps(20 * 10); // feed paper in (for debug purposes to save empty space on paper)
+    // while (stepper.moving())
+    // {
+    // }
+    // stepper.doSteps(-10 * 10); // feed paper in (for debug purposes to save empty space on paper)
+    // while (stepper.moving())
+    // {
+    // }
 
     delay(1000);
 
