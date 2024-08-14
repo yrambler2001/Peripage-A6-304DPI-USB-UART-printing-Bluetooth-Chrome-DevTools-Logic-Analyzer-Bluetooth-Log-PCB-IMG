@@ -144,5 +144,6 @@ There are some WIP branches with different approaches.
 - It is complicated to handle/calculate/measure heating and cooling impact on contrast of specific pixels.
 - No more than 64 pixels should be turned on at the same time
 - It is complicated to create a perfect pattern of changing 64 pixels to have same heating effect on all pixels with regard to the cooling effect.
+- It is complicated to calculate perfect timings for turning the motor / enabling the heating / cooling / drawing the subline (on one step of motor (1 line is 4 sublines))
 - When less than 64 (or typical amount) pixels are turned on, the heating effect changes due to changes of resistance of the printing head.
 - There is no feasible way to increase "available time during printing" for time consuming improvements by fixing the "motor is turned slowly" issue by increasing thermal head voltage and speeding up the motor because a DC/DC converter IN:3.0-4.2v OUT:5v with support of 2-3A on the output is a somewhat big device compared to a size of a printer. (Such DC/DC converter can not be fitted inside a printer easily)
