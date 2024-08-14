@@ -2281,7 +2281,7 @@ void writeLine(const uint8_t *data, uint16_t line_index)
 {
   for (uint8_t runNumber = 0; runNumber < 4; runNumber += 1)
   {
-    stepper.doSteps(-1);
+    // stepper.doSteps(-1);
 
     // while (stepper.moving())
     // {
@@ -2290,12 +2290,12 @@ void writeLine(const uint8_t *data, uint16_t line_index)
     // Iterate over each bit position (0 to 7)
     for (uint8_t bit = 0; bit < 8; ++bit)
     {
-      // We cannot wait extra time for stepper to end its step selectively because heating element will lose heat.
+      // We cannot wait extra time for stepper tow end its step selectively because heating element will lose heat.
       // We are always waiting before each print so we know that heating element lost its heat evenly before each print.
       delayMicroseconds(WAIT_TIME_FOR_STEPPER_TO_COMPLETE_STEP_MICROSECONDS);
 
       // Calculate the mask for the desired bit position
-      uint8_t mask = 1 << (7 - bit);
+      uint8_t mask = (((runNumber+bit)%4==0)?1:0) << (7 - bit);
 
       // Apply the mask to each byte in the input array
       for (int i = 0; i < 72; ++i)
@@ -2319,7 +2319,7 @@ void writeLine(const uint8_t *data, uint16_t line_index)
       digitalWrite(PIN_LAT, HIGH);
       delayMicroseconds(2);
       GPIO.out_w1ts = ((uint32_t)1 << PIN_DST);
-      delayMicroseconds(1200);
+      delayMicroseconds(3000);
       GPIO.out_w1tc = ((uint32_t)1 << PIN_DST);
       delayMicroseconds(7);
     }
@@ -2342,13 +2342,13 @@ void loop()
 
     stepper.attach(PIN_AIN2, PIN_BIN1, PIN_AIN1, PIN_BIN2);
     stepper.setSpeed(89); // rpm
-    // stepper.rotate(-1);
+    stepper.rotate(-1);
     digitalWrite(PIN_VP, HIGH); // Motor driver is powered from the same line as the printer head
-    stepper.doSteps(-3 * 10); // feed paper out
+    // stepper.doSteps(-3 * 10); // feed paper out
     // stepper.doSteps(10 * 10); // feed paper in (for debug purposes to save empty space on paper)
-    while (stepper.moving())
-    {
-    }
+    // while (stepper.moving())
+    // {
+    // }
 
     delay(1000);
 
