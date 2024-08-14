@@ -1,6 +1,6 @@
 ## Introduction
 
-This is a WIP project to implement a light replacement of a CPU inside a printer with ESP-32.
+This is a WIP project to implement a light replacement of a CPU inside a printer with ESP-32. Current state: "on hold".
 
 The original goal was to print images in raw quality, pixel perfect, e.g. without additional transformation from an APP but there were caveats so I am developing a replacement of a CPU that will be focused on quality instead of speed.
 
@@ -89,6 +89,7 @@ I have found that I am getting rare more black or more white lines. It looks lik
 ### Observing the Printer Head
 
 There was an unknown printing head with cable "A6-ROHM300-3.7", looks like A6 is the printer's name, ROHM is something unknown, BTW there is a company ROHM Semiconductor, and 3.7 may be a print voltage. I am not sure if the head has been designed specifically for this printer completely or if it is just a custom flex cable. On the head, there is a KTH0697-1, 94V-0, and HY-280 labels.
+UPD: it may be [ROHM KR3002-B06N1BA](https://www.rohm.com/products/printheads/mobile-printers/kr3002-b06n1ba-product) head.
 
 ### Searching through the web for an algorithm
 
@@ -129,4 +130,19 @@ So to draw one pixel, the motor has to do `StepsOfStepperMotor6.7mmToDrawOnePixe
 
 So the stepper has to do 4 steps to move from line to line, which is the same as the number of steps the original software from PeriPage does to print a line [[img](./info/readme%20images/Screenshot%202024-08-12%20at%2013.45.39.png)] [[log](./info/saleae/original%20chip/motor.sal)]
 
----
+## Example improvements that maybe can be done
+
+Turning on specific pixels at the 75% or 50% or 25% or 12% (...) of heating time to have more than 1 bit of color.
+
+## Stop of development
+
+There are some WIP branches with different approaches.
+
+### There is a strict limit of improvements that can be done, due to issues:
+
+- If "motor is turned slowly" and "the printed area in a row is large" and "the power (contrast) is high", the paper is sticking to the printing head. - only 4th motor step actually moves the paper.
+- It is complicated to handle/calculate/measure heating and cooling impact on contrast of specific pixels.
+- No more than 64 pixels should be turned on at the same time
+- It is complicated to create a perfect pattern of changing 64 pixels to have same heating effect on all pixels with regard to the cooling effect.
+- When less than 64 (or typical amount) pixels are turned on, the heating effect changes due to changes of resistance of the printing head.
+- There is no feasible way to increase "available time during printing" for time consuming improvements by fixing the "motor is turned slowly" issue by increasing thermal head voltage and speeding up the motor because a DC/DC converter IN:3.0-4.2v OUT:5v with support of 2-3A on the output is a somewhat big device compared to a size of a printer. (Such DC/DC converter can not be fitted inside a printer easily)
